@@ -1,0 +1,16 @@
+<script>
+tippy('.helper', {             // Use class or id
+  animation: 'scale',         // See docs for more options (there are a few nice ones 😉)
+  duration: 100,              // Duration for ToolTip Animation
+  arrow: true,                // Add ToolTip Arrow
+  delay: [50, 50],             // First # = delay in, second # = delay out
+  arrowType: 'sharp',         // Sharp or 'round' or remove for none
+  theme: 'light',  
+  placement: 'right',
+  maxWidth: 300,              
+})
+</script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css"/>
+<script defer src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="legalplace-formalites" ></script>

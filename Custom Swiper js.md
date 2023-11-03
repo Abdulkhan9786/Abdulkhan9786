@@ -77,3 +77,21 @@ height:10px;
 background: #0097A1;
 }
 </Style>
+
+
+
+
+
+
+
+
+
+
+
+//when two slider Synchronise
+<script>
+  swiper1.on('slideChange', function() {
+  var activeIndex = swiper1.realIndex; // Use realIndex instead of activeIndex
+  swiper2.slideTo(activeIndex);
+});
+</script>

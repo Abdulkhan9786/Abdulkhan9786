@@ -95,3 +95,34 @@ background: #0097A1;
   swiper2.slideTo(activeIndex);
 });
 </script>
+
+
+
+//when swiper want to use tab
+<script>
+$(document).ready(function () {
+ $(".gallery-tab").click(function () {
+        // Get the data-slide attribute to determine which slide to go to
+        var slideIndex = $(this).data("slide");
+
+        // Slide to the selected slide with a transition
+        swiperfeatures.slideTo(slideIndex, 500, true);
+
+        // Remove the "active" class from all gallery-tabs
+        $(".gallery-tab").removeClass("active");
+
+        // Add the "active" class to the clicked gallery-tab
+        $(this).addClass("active");
+    });
+
+    // Initially, set the first gallery-tab as active
+    $(".gallery-tab[data-slide='0']").addClass("active");
+
+    // Optionally, you can add this code block to handle the initial slide
+    swiperfeatures.on('slideChange', function () {
+        var activeSlideIndex = swiperfeatures.activeIndex;
+        $(".gallery-tab").removeClass("active");
+        $(".gallery-tab[data-slide='" + activeSlideIndex + "']").addClass("active");
+    });
+});
+</script>

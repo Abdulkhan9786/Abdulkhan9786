@@ -76,9 +76,20 @@ height:10px;
 .w-slider-dot.w-active {    
 background: #0097A1;
 }
+  //slider transation smooth 
+.trust-logo > .swiper-wrapper{
+  transition-timing-function : linear;
+}
 </Style>
 
-
+Auto slider with smooth moving
+<script>
+  speed: 2000, // Set the speed of the transition (in milliseconds)
+        autoplay: {
+            delay:0,// Delay between transitions (set to 0 for continuous scrolling)
+            disableOnInteraction: false,
+        },
+</script>
 
 
 

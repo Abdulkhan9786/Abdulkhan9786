@@ -29,3 +29,14 @@ $(document).ready(function(){
         });
     });
 });
+
+
+
+
+
+Dropdown open
+var Webflow = Webflow || [];
+            Webflow.push(function() {
+                document.getElementById('active-dd-tab').classList.add('w--open');
+                $('.active-dd-tab').addClass('w--open');
+            });

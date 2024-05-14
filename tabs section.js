@@ -44,7 +44,7 @@ $(navButtons).click(function(e){
 
 
 
-Link to current tab change
+Link to current tab change (Webflow)
 Link URL /page name#Tab-1(tab setting name)
 <script>
   $( function() {
@@ -80,4 +80,29 @@ Link URL /page name#Tab-1(tab setting name)
 //onload, make first button active
 navButtons.first().addClass('active');
   
+</script>
+
+
+
+
+
+Wordpress tab created
+class name should be same 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+     $(document).ready(function(){
+        // Hide all sections initially
+        $(".section-change").hide();
+        
+        $(".card").click(function(){
+            // Hide all sections
+            $(".section-change").hide();
+            
+            // Find the index of the clicked card by its position relative to its siblings
+            var index = $(this).index(".card");
+            
+            // Show the corresponding section with the same index
+            $(".section-change").eq(index).show();
+        });
+    });
 </script>

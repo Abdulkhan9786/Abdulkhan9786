@@ -1,4 +1,5 @@
- $(document).ready(function() {
+<script>
+$(document).ready(function() {
   let lastScrollTop = 0;
   let scrollTimeout;
   let scrollStopTimeout;
@@ -20,3 +21,4 @@
     }, 2000); // 5 minutes
   });
 });
+</script>

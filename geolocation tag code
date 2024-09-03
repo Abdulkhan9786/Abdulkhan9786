@@ -1,0 +1,38 @@
+<script>
+function geolocation_redirect_based_on_country() {
+    if ( ! is_admin() ) {
+        if ( function_exists('geoip_detect2_get_info_from_current_ip') ) {
+            $geo_data = geoip_detect2_get_info_from_current_ip();
+            if ( $geo_data && isset($geo_data->country->isoCode) ) {
+                $country_code = $geo_data->country->isoCode;
+
+                if ($country_code == 'AU') {
+                    wp_redirect('https://vedalekha.com/');
+                    exit();
+                } elseif ($country_code == 'IN') {
+                    wp_redirect('https://vedalekha.com/in/');
+                    exit();
+                } elseif ($country_code == 'NZ') {
+                    wp_redirect('https://vedalekha.com/nz/');
+                    exit();
+                } elseif ($country_code == 'SG') {
+                    wp_redirect('https://vedalekha.com/sg/');
+                    exit();
+                } elseif ($country_code == 'UK') {
+                    wp_redirect('https://vedalekha.com/uk/');
+                    exit();
+                } else {
+                    wp_redirect('https://vedalekha.com/default/');
+                    exit();
+                }
+            } else {
+                wp_redirect('https://vedalekha.com/default/');
+                exit();
+            }
+        } else {
+            error_log('GeoIP detection function not available.');
+        }
+    }
+}
+add_action('template_redirect', 'geolocation_redirect_based_on_country');
+</script>
